@@ -6,15 +6,20 @@ public class Brick extends Sprite {
 	
 	public Brick(int x, int y) {
 		// TODO: Set x using the parameter
+		self.x = x;
 		// TODO: Set y using the parameter
+		self.y = y;
 		// TODO: Set the width and height of the brick using Settings.BRICK_WIDTH/HEIGHT
+		self.WIDTH = Settings.BRICK_WIDTH;
+		self.HEIGHT = Settings.BRICK_HEIGHT;
 	}
 
 	public boolean isBroken() {
-		return false;	// TODO: Return the correct variable
+		return broken;	// DONE: Return the correct variable
 	}
 	public void setBroken(boolean b) {
 		// TODO: Set the broken variable using the parameter given
+		broken = b;
 	}
 	
 	public void paint(Graphics g) {
