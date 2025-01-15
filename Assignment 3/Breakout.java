@@ -10,9 +10,14 @@ public class Breakout extends JFrame{
 	
 	public Breakout() {
 		// TODO: Set the size of the screen (use Settings.WINDOW_WIDTH/HEIGHT)
+		Settings.WINDOW_WIDTH = 800;
+		Settings.HEIGHT = 600;
 		// TODO: Set the title
+		Settings.TITLE = "Arkanoid";
 		// TODO: Set the background colour to white
+		Settings.
 		// TODO: Set resizable to false
+		Settings.
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         panel = new BreakoutPanel(this);
         add(panel);
