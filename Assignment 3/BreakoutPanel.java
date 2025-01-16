@@ -32,10 +32,11 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 		// TODO: Create a new ball object and assign it to the appropriate variable
 		ball = new Ball;
 		// TODO: Create a new paddle object and assign it to the appropriate variable
-		
+		paddle = new Paddle;
 		// TODO: Create a new bricks array (Use Settings.TOTAL_BRICKS)
-		
+		int bricks = (Settings.TOTAL_BRICKS).length;
 		// TODO: Call the createBricks() method
+		createBricks();
 	}
 	
 	private void createBricks() {
@@ -55,11 +56,21 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 	
 	private void paintBricks(Graphics g) {
 		// TODO: Loop through the bricks and call the paint() method
+		int counter = 0;
+		for(int x = 0; x < 4; x++) {
+			for(int y = 0; y < 5; y++) {
+				bricks[counter].paint(g);
+				counter++;
+			}			
+		}
 	}
 	
 	private void update() {
 		if(gameRunning) {
 			// TODO: Update the ball and paddle
+			ball.update();
+			paddle.update();
+
 			collisions();
 			repaint();
 		}
@@ -67,15 +78,18 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 	
 	private void gameOver() {
 		// TODO: Set screen message
+		String screenMessage = "Game over!"
 		stopGame();
 	}
 	
 	private void gameWon() {
 		// TODO: Set screen message
+		String screenMessage = "You won."
 		stopGame();
 	}
 	
 	private void stopGame() {
+		String screenMessage = "Game stopped."
 		gameRunning = false;
 	}
 	
@@ -155,6 +169,10 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
         
         // Draw lives left
         // TODO: Draw lives left in the top left hand corner
+        
+        g.setFont(new Font("Arial", Font.BOLD, 18));
+        int messageWidth = g.getFontMetrics().stringWidth(score);
+        g.drawString(screenMessage, (Settings.WINDOW_WIDTH / 2) - (messageWidth / 2), Settings.MESSAGE_POSITION);
         
         // Draw screen message
         if(screenMessage != null) {
