@@ -12,7 +12,8 @@ public class Breakout extends JFrame{
 		// DONE: Set the size of the screen (use Settings.WINDOW_WIDTH/HEIGHT)		
                 setSize(Settings.WINDOW_WIDTH, Settings.WINDOW_HEIGHT);                
              	// adds the panel to the frame
-             	add(new BreakoutPanel());
+		// FIXME
+             	add(new BreakoutPanel());		
 		// DONE: Set the title
 		setTitle(Settings.WINDOW_NAME);
 		// DONE: Set the background colour to white		
