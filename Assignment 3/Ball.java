@@ -7,9 +7,11 @@ public class Ball extends Sprite {
 	// Constructor
 	public Ball() {
 		// DONE: Set width to Settings.BALL_WIDTH
-		int width = Settings.BALL_WIDTH;
+		//int width = Settings.BALL_WIDTH;
+		this.width = Settings.BALL_WIDTH;
 		// DONE: Set width to Settings.BALL_HEIGHT
-		int height = Settings.BALL_HEIGHT;
+		//int height = Settings.BALL_HEIGHT;
+		this.height = Settings.BALL_HEIGHT;
 		// DONE: Call resetPosition
 		resetPosition();
 	}
