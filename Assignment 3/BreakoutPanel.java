@@ -30,11 +30,11 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 		timer.start();
 		
 		// TODO: Create a new ball object and assign it to the appropriate variable
-		ball = new Ball;
+		ball = new Ball();
 		// TODO: Create a new paddle object and assign it to the appropriate variable
-		paddle = new Paddle;
+		paddle = new Paddle();
 		// TODO: Create a new bricks array (Use Settings.TOTAL_BRICKS)
-		int bricks = (Settings.TOTAL_BRICKS).length;
+		bricks = new Brick[Settings.TOTAL_BRICKS];		
 		// TODO: Call the createBricks() method
 		createBricks();
 	}
@@ -78,18 +78,18 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 	
 	private void gameOver() {
 		// TODO: Set screen message
-		String screenMessage = "Game over!"
+		String screenMessage = "Game over!";
 		stopGame();
 	}
 	
 	private void gameWon() {
 		// TODO: Set screen message
-		String screenMessage = "You won."
+		String screenMessage = "You won.";
 		stopGame();
 	}
 	
 	private void stopGame() {
-		String screenMessage = "Game stopped."
+		String screenMessage = "Game stopped.";
 		gameRunning = false;
 	}
 	
@@ -171,8 +171,10 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
         // TODO: Draw lives left in the top left hand corner
         
         g.setFont(new Font("Arial", Font.BOLD, 18));
-        int messageWidth = g.getFontMetrics().stringWidth(score);
-        g.drawString(screenMessage, (Settings.WINDOW_WIDTH / 2) - (messageWidth / 2), Settings.MESSAGE_POSITION);
+        String stringLivesLeft = Integer.toString(livesLeft);
+        int livesWidth = g.getFontMetrics().stringWidth(stringLivesLeft);
+        int livesHeight = g.getFontMetrics().stringWidth(stringLivesLeft);
+        g.drawString(stringLivesLeft, 0 + (livesWidth / 2), 0 + (livesHeight / 2) );
         
         // Draw screen message
         if(screenMessage != null) {
@@ -183,13 +185,28 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
     }
 
 	@Override
-	public void keyPressed(KeyEvent e) {
-		// TODO: Set the velocity of the paddle depending on whether the player is pressing left or right
+	public void keyPressed(KeyEvent event) {
+		//keys[e.getKeyCode()] = true;
+		//if ()
+		//xVelocity
+		///xVelocity
+		
+        if (event.getKeyCode() == KeyEvent.VK_A) {
+            //inputs.add(GameInput.UP);
+        	paddle.setXVelocity(Settings.PADDLE_VELOCITY * - 1);
+        } else if (event.getKeyCode() == KeyEvent.VK_D) {
+        	paddle.setXVelocity(Settings.PADDLE_VELOCITY);
+        }
+		
+		
 	}
 
 	@Override
-	public void keyReleased(KeyEvent e) {
+	public void keyReleased(KeyEvent event) {
 		// TODO: Set the velocity of the paddle after the player has released the keys
+		if (event == "" ) {
+				paddle.xVelocity = 0;
+			}
 	}
 
 	@Override
