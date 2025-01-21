@@ -1,1 +1,7 @@
-
+Describe the methods you used to test your program including:
+o How you tested the functionality and usability of your program. Be clear
+about what tests you used, the results of those tests, and how those results
+were addressed.
+o Examples of how the program could be tested for compliance
+• Discuss any strategies implemented to improve the maintainability of the program.
+Include the strategies implemented and how they work to improve maintainability.
