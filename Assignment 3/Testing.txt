@@ -1,3 +1,8 @@
+// Still to compete:
+Game over! 
+You won! messages etc
+
+
 Describe the methods you used to test your program including:
 o How you tested the functionality and usability of your program. Be clear
 about what tests you used, the results of those tests, and how those results
