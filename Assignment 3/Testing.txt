@@ -1,12 +1,50 @@
 // Still to compete:
-Game over! 
-You won! messages etc
+Find the titlebar size from the other one.
+Change the ball fall out the bottom to the window size
+Collisions using internal ball speed rather than settings file
 
+https://github.com/Zenoscope/BIT504/blob/main/src/GameMain.java
+		add(statusBar, BorderLayout.SOUTH);
+		// account for statusBar height in overall height
+		setPreferredSize(new Dimension(CANVAS_WIDTH, CANVAS_HEIGHT + 30));
+
+// extra:
+Change it to use a rectangular field instead of the whole window
+
+https://www.geeksforgeeks.org/types-software-testing/#types-of-manual-testing
 
 Describe the methods you used to test your program including:
 o How you tested the functionality and usability of your program. Be clear
 about what tests you used, the results of those tests, and how those results
 were addressed.
+
+ Tests used: 
+Whitebox testing
+ Running code and using the debugger to step through and debugging the code.
+ Using text to print out messages to confirm functionality: 
+   Location of the paddle and ball, spawn points for the bricks, messages when the ball collides with bricks or the paddle, and when the game finishes.
+ 
+Blackbox testing:
+ Running the program and checking functionality:
+  Confirm the paddle moves in the correct when the assigned keys are presssed.
+  Confirm the blocks are drawn and destroyed when the ball hits them.
+  Confirm the ball bounces off the paddle.
+  Confirm the ball changes direction when hitting the window borders.
+  Confirm the ball respawns and goes in the correct direction.
+  Confirm the game ends with XXXXX when the ball hits the bottom of the window
+  Confirm the game ends with XXXXX when all of the blocks are destroyed.
+  
 o Examples of how the program could be tested for compliance
+Compliance with what? (code compliance and best practice?)
+
 • Discuss any strategies implemented to improve the maintainability of the program.
 Include the strategies implemented and how they work to improve maintainability.
+Maintainability:
+Global setting in the settings file - to set initial ball/paddle speed
+Setting the ball and paddle speed so that they can be changed later (eg ball speeds up/slows down)
+Using the window side rather than hard coding
+Coding practices - separeat files for objects. Sprite as parent, ball and paddle as children.
+Main loop is a separate file along 
+
+
+
