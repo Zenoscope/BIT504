@@ -9,10 +9,10 @@ public class Breakout extends JFrame{
 	private BreakoutPanel panel;
 	
 	public Breakout() {
-		// DONE: Set the size of the screen (use Settings.WINDOW_WIDTH/HEIGHT)		
+		// Set the size of the screen		
         setSize(Settings.WINDOW_WIDTH, Settings.WINDOW_HEIGHT);                
        	// adds the panel to the frame
-		// FIXME
+		// FIXME this didn't work
         // add(new BreakoutPanel());		
 		// DONE: Set the title
 		setTitle(Settings.WINDOW_NAME);
@@ -23,9 +23,9 @@ public class Breakout extends JFrame{
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         panel = new BreakoutPanel(this);
         add(panel);
-		// DONE: Set visible to true
+		// Set window visible to true
 		setVisible(true);
-	}
+		}
 
 	public static void main(String[] args) {
 		javax.swing.SwingUtilities.invokeLater(new Runnable() {
