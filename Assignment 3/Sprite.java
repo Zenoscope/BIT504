@@ -5,6 +5,7 @@ public class Sprite {
 	protected int x,y,width,height;
 	
 	// Note: This should only set a single value, they can be done in a single statement
+	// sets the x and y  location of the sprite
 	public void setX(int x) {
 		// TODO
 		this.x = x;
@@ -13,6 +14,7 @@ public class Sprite {
 		// TODO
 		this.y = y;
 	}
+	// set the width and height of the sprite
 	public void setWidth(int width) { 
 		// TODO
 		this.width = width;
@@ -22,13 +24,14 @@ public class Sprite {
 		this.height = height;
 	}
 	
-	// Note: Change the "0" to the correct variable
+	// return the X adnd Y location
 	public int getX() { 
 		return x;	// TODO: Return correct value
 	}
 	public int getY() { 
 		return y;	// TODO: Return correct value
 	}
+	// retun the width and height
 	public int getWidth() { 
 		return width;	// TODO: Return correct value
 	}
@@ -36,7 +39,9 @@ public class Sprite {
 		return height;	// TODO: Return correct value
 	}
 	
+	// get the rectangle of the sprite
 	Rectangle getRectangle() {
+		//System.out.print(Integer.toString(height));
 		return new Rectangle(x, y, width, height);
 	}
 }
