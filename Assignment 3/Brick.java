@@ -15,11 +15,11 @@ public class Brick extends Sprite {
 	}
 
 	public boolean isBroken() {
-		// TODO: Return the correct variable
+		// Return the "broken" variable
 		return broken;
 	}
 	public void setBroken(boolean b) {
-		// TODO: Set the broken variable using the parameter given
+		// Set the broken variable
 		if (b == true) {
 		 	this.broken = true;
 		}
@@ -28,6 +28,7 @@ public class Brick extends Sprite {
 		}
 	}
 	
+	// draw the brick if its not broken
 	public void paint(Graphics g) {
 		if(!broken) {
 			g.fillRect(x, y, Settings.BRICK_WIDTH, Settings.BRICK_HEIGHT);
